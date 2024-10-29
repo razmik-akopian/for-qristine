@@ -1,13 +1,13 @@
 'use client';
 
-import { Button, Switch } from '@mantine/core';
-import { BUTTON_TEXT, SWITCH_LABELS, TLanguage } from '../constants';
 import { useState } from 'react';
-import { PostCard } from '../components/PostCard';
+import { Button, Switch } from '@mantine/core';
+import { BUTTON_TEXT, SWITCH_LABELS, TLanguage } from '../../constants';
+import { PostCard } from '../PostCard';
 
-import styles from './App.module.css';
+import styles from './Main.module.css';
 
-export default function HomePage() {
+const Main = () => {
   const [showPostCard, setShowPostCard] = useState(false);
   const [language, setLanguage] = useState<TLanguage>('RUS');
 
@@ -21,7 +21,6 @@ export default function HomePage() {
         className={styles.switcher}
         onChange={() => setLanguage((prev) => (prev === 'ARM' ? 'RUS' : 'ARM'))}
       />
-
       <Button
         onClick={() => setShowPostCard((prev) => !prev)}
         size="xl"
@@ -30,8 +29,9 @@ export default function HomePage() {
       >
         {BUTTON_TEXT[language]}
       </Button>
-
       {showPostCard && <PostCard language={language} />}
     </div>
   );
-}
+};
+
+export { Main };

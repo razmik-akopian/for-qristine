@@ -1,0 +1,8 @@
+.postCard {
+  margin-top: 40px;
+
+  .text {
+    margin: 20px 0;
+    white-space: pre-line;
+  }
+}

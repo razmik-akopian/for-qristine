@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-image: url('/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.switcher {
+  position: absolute !important;
+  top: 20px;
+  right: 20px;
+}
+
+.button:focus {
+  outline: none;
+}
