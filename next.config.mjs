@@ -9,6 +9,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  assetPrefix: '/for-qristine/',
 };
 
 export default nextConfig;
