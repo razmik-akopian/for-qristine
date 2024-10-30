@@ -8,12 +8,21 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
 }
 
 .switcher {
   position: absolute !important;
   top: 20px;
   right: 20px;
+}
+
+.button {
+  margin-top: 40px;
 }
 
 .button:focus {
