@@ -9,8 +9,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/for-qristine',
-  assetPrefix: '/for-qristine/',
 };
 
 export default nextConfig;
