@@ -9,8 +9,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/for-qristine', // замените на имя вашего репозитория
+  basePath: '/for-qristine',
+  assetPrefix: '/for-qristine/',
 };
 
 export default nextConfig;
-// next.config.js
