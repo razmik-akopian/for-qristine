@@ -1,8 +1,7 @@
 'use client';
-
 import { createTheme } from '@mantine/core';
 
 export const theme = createTheme({
-  fontFamily: 'Manrope, sans-serif',
-  headings: { fontFamily: 'Manrope, sans-serif' },
+  fontFamily: 'Poppins, sans-serif',
+  headings: { fontFamily: 'Poppins, sans-serif' },
 });
