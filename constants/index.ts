@@ -57,4 +57,15 @@ const FOOTER_TEXT = {
   },
 } as const;
 
-export { BUTTON_TEXT, SWITCH_LABELS, POST_CARD_TEXT, FOOTER_BUTTON_TEXT, FOOTER_TEXT };
+const COPYRIGHT = {
+  first: {
+    RUS: '© 2024 Акопян Размик Эдикович ИП.',
+    ARM: '© 2024 Ակոբյան Ռազմիկ Էդիկի ԱՁ.',
+  },
+  second: {
+    RUS: 'Все права защищены.',
+    ARM: 'Բոլոր իրավունքները պաշտպանված են.',
+  },
+};
+
+export { BUTTON_TEXT, SWITCH_LABELS, POST_CARD_TEXT, FOOTER_BUTTON_TEXT, FOOTER_TEXT, COPYRIGHT };

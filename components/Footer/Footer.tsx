@@ -6,7 +6,7 @@ import { Button, Image, Text } from '@mantine/core';
 import { ImageWrapper } from '../ImageWrapper';
 import styles from './Footer.module.css';
 
-import { FOOTER_BUTTON_TEXT, FOOTER_TEXT, TLanguage } from '../../constants';
+import { COPYRIGHT, FOOTER_BUTTON_TEXT, FOOTER_TEXT, TLanguage } from '../../constants';
 
 const Footer = ({ language }: { language: TLanguage }) => {
   const [showContent, setShowContent] = useState(false);
@@ -51,6 +51,15 @@ const Footer = ({ language }: { language: TLanguage }) => {
 
           <Text size="lg" className={styles.text}>
             {FOOTER_TEXT.third[language]}
+          </Text>
+
+          <Text size="lg" className={`${styles.text} ${styles.date}`}>
+            30.10.2024
+          </Text>
+
+          <Text size="sm">
+            <div>{COPYRIGHT.first[language]}</div>
+            <div>{COPYRIGHT.second[language]}</div>
           </Text>
         </div>
       )}
