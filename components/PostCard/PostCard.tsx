@@ -6,8 +6,15 @@ import { Footer } from '../Footer';
 import { ImageWrapper } from '../ImageWrapper';
 
 import styles from './PostCard.module.css';
+import { Dispatch, SetStateAction } from 'react';
 
-const PostCard = ({ language }: { language: TLanguage }) => {
+const PostCard = ({
+  language,
+  setLanguage,
+}: {
+  language: TLanguage;
+  setLanguage: Dispatch<SetStateAction<'ARM' | 'RUS' | 'BY'>>;
+}) => {
   return (
     <div className={styles.postCard}>
       <ImageWrapper>
@@ -32,7 +39,7 @@ const PostCard = ({ language }: { language: TLanguage }) => {
         {POST_CARD_TEXT.sixth[language]}
       </Text>
 
-      <Footer language={language} />
+      <Footer language={language} setLanguage={setLanguage} />
     </div>
   );
 };

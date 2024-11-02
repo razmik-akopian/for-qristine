@@ -32,7 +32,7 @@ const Main = () => {
           {BUTTON_TEXT[language]}
         </Button>
 
-        {showPostCard && <PostCard language={language} />}
+        {showPostCard && <PostCard language={language} setLanguage={setLanguage} />}
       </div>
     </div>
   );
