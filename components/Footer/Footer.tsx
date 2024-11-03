@@ -65,9 +65,14 @@ const Footer = ({
             {FOOTER_TEXT.third[language]}
           </Text>
 
-          <Text size="lg" className={`${styles.text} ${styles.date}`}>
-            30.10.2024
-          </Text>
+          <div className={`${styles.text} ${styles.date}`}>
+            <Image
+              src="/sign.png"
+              alt="Подпись"
+              style={{ width: 'auto', height: 'auto', maxWidth: '100%' }}
+            />
+            <Text size="lg">30.10.2024</Text>
+          </div>
 
           <div>
             <div>{COPYRIGHT.first[language]}</div>

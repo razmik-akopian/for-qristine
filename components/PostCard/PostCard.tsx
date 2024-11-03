@@ -7,6 +7,7 @@ import { ImageWrapper } from '../ImageWrapper';
 
 import styles from './PostCard.module.css';
 import { Dispatch, SetStateAction } from 'react';
+import { AudioPlayer } from '../AudioPlayer';
 
 const PostCard = ({
   language,
@@ -40,6 +41,8 @@ const PostCard = ({
       </Text>
 
       <Footer language={language} setLanguage={setLanguage} />
+
+      <AudioPlayer />
     </div>
   );
 };
