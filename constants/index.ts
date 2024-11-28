@@ -72,7 +72,7 @@ const FOOTER_TEXT = {
 const COPYRIGHT = {
   first: {
     RUS: '© 2024 Акопян Размик Эдикович ИП.',
-    ARM: '© 2024 Ակոբյան Ռազմիկ Էդիկի ԱՁ.',
+    ARM: '© 2024 Հակոբյան Ռազմիկ Էդիկի ԱՁ.',
     BY: '© 2024 Акопян Размік Эдыкавіч ІП.',
   },
   second: {
@@ -80,6 +80,12 @@ const COPYRIGHT = {
     ARM: 'Բոլոր իրավունքները պաշտպանված են.',
     BY: 'Усе правы абаронены.',
   },
+};
+
+const VIEW_COUNT_TEXT = {
+  RUS: 'Количество просмотров открытки: ',
+  ARM: 'Բացիկի դիտումների քանակը: ',
+  BY: 'Колькасць праглядаў адкрыткі: ',
 };
 
 const EXTRA_BUTTON_TEXT = {
@@ -95,4 +101,5 @@ export {
   FOOTER_TEXT,
   COPYRIGHT,
   EXTRA_BUTTON_TEXT,
+  VIEW_COUNT_TEXT,
 };

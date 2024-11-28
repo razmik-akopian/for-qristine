@@ -12,6 +12,7 @@ import {
   FOOTER_BUTTON_TEXT,
   FOOTER_TEXT,
   TLanguage,
+  VIEW_COUNT_TEXT,
 } from '../../constants';
 
 const Footer = ({
@@ -22,7 +23,26 @@ const Footer = ({
   setLanguage: Dispatch<SetStateAction<'ARM' | 'RUS' | 'BY'>>;
 }) => {
   const [showContent, setShowContent] = useState(false);
+  const [viewCount, setViewCount] = useState<number>(0); // Состояние для viewCount
   const contentRef = useRef<HTMLDivElement>(null);
+  const initialized = useRef(false); // Флаг для предотвращения двойного вызова
+
+  useEffect(() => {
+    if (!initialized.current) {
+      const storedCount = localStorage.getItem('viewCount');
+      if (storedCount === null) {
+        // Если значения нет, установить 1
+        localStorage.setItem('viewCount', '1');
+        setViewCount(1);
+      } else {
+        // Если значение есть, увеличить на 1
+        const newCount = Number(storedCount) + 1;
+        localStorage.setItem('viewCount', String(newCount));
+        setViewCount(newCount);
+      }
+      initialized.current = true; // Помечаем как инициализированное
+    }
+  }, []);
 
   useEffect(() => {
     if (showContent && contentRef.current) {
@@ -78,6 +98,11 @@ const Footer = ({
             <div>{COPYRIGHT.first[language]}</div>
             <div>{COPYRIGHT.second[language]}</div>
           </div>
+
+          <Text size="md" className={styles.text}>
+            {VIEW_COUNT_TEXT[language]}
+            {viewCount}
+          </Text>
 
           {language !== 'BY' && (
             <Button
